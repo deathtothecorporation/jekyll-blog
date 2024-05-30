@@ -32,9 +32,10 @@ gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
 # do not have a Java counterpart.
 gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
-gem "rackup"
+gem 'sinatra-contrib', '~> 2.0'
+gem 'rack-protection', '~> 2.0'
 
 group :jekyll_plugins do
-  gem 'jekyll-admin', '~> 0.11.0'
+  gem 'jekyll-admin'
 end
 
