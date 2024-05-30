@@ -2,6 +2,16 @@ section header h1 {
   font-size: 18px;
 }
 
+
+// implements our .key-term class
+strong em, em strong {
+  background: black;
+  font-weight: normal;
+  color: white;
+  font-style: italic;
+  padding: 0 0.5em;
+}
+
 .key-term {
   background: black;
   color: white;
@@ -32,8 +42,42 @@ a:hover {
   @apply font-semibold;
 }
 
-a:visited {
-  /* color: purple; */
+
+.social-media-list {
+  a {
+    color: $text-color;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.contact-list {
+  a {
+    color: $text-color;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+pre,
+code {
+  background-color: $grey-color-light !important;
+}
+.highlighter-rouge {
+  background-color: $grey-color-light !important;
+}
+.highlight {
+  background-color: $grey-color-light !important;
+}
+
+.site-header, .site-footer {
+  a:hover {
+    font-weight: normal;
+  }
 }
 
 button {
@@ -100,6 +144,29 @@ footer a {
 
 footer p {
   @apply text-[8px];
+}
+
+// implements our .horizonta-bars class
+hr {
+  border: none;
+  background-image: repeating-linear-gradient(
+    0deg,
+    #000000 0px, #000000 1px,
+    transparent 1px, transparent 2px, 
+    #000000 2px, #000000 3px, 
+    transparent 3px, transparent 4px, 
+    #000000 4px, #000000 5px, 
+    transparent 5px, transparent 6px, 
+    #000000 6px, #000000 7px,
+    #696868 7px, #696868 8px, 
+    transparent 8px, transparent 9px, 
+    #000000 9px, #000000 10px, 
+    transparent 10px, transparent 11px
+  );
+  background-size: 100% 13px; /* Set the size of your "sprite" */
+  height: 13px; /* At least the height of your "sprite" */
+  width: 100%; /* Full width of the container */
+  background-position: left top; /* Start the pattern from the bottom-left corner */
 }
 
 .horizontal-bars {
