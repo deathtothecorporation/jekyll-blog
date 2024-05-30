@@ -1,0 +1,124 @@
+section header h1 {
+  font-size: 18px;
+}
+
+.key-term {
+  background: black;
+  color: white;
+  font-style: italic;
+  padding: 0 0.5em;
+}
+
+.fade-transition {
+  transition: opacity 0.1s ease;
+}
+
+.hero {
+  color: #000;
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+
+a {
+  color: #00E;
+  @apply underline;
+}
+
+a:hover {
+  @apply cursor-pointer;
+  @apply font-semibold;
+}
+
+a:visited {
+  /* color: purple; */
+}
+
+button {
+  font-size: 13px;
+  @apply bg-black;
+  @apply text-white;
+  @apply py-2;
+  @apply px-4;
+}
+
+button:disabled {
+  @apply cursor-not-allowed;
+  @apply opacity-60;
+}
+
+header aside {
+  font-size: 10px;
+}
+
+section {
+  font-size: 14px;
+  @apply mb-8;
+}
+
+section header {
+  @apply mb-4;
+  @apply font-semibold;
+  @apply flex;
+  @apply flex-row;
+  @apply items-center;
+}
+
+section p {
+  @apply mb-4;
+  @apply text-justify;
+}
+
+ul {
+  @apply mb-4;
+}
+
+li {
+  @apply list-disc;
+  @apply ml-8;
+  @apply text-left;
+}
+
+footer ul {
+  @apply flex;
+  @apply flex-row;
+  @apply justify-between;
+}
+
+footer ul li {
+  @apply inline-block;
+  @apply ml-0;
+}
+
+footer a {
+  @apply no-underline;
+  @apply text-black;
+  @apply font-semibold;
+}
+
+footer p {
+  @apply text-[8px];
+}
+
+.horizontal-bars {
+  background-image: repeating-linear-gradient(
+    0deg,
+    #000000 0px, #000000 1px,
+    transparent 1px, transparent 2px, 
+    #000000 2px, #000000 3px, 
+    transparent 3px, transparent 4px, 
+    #000000 4px, #000000 5px, 
+    transparent 5px, transparent 6px, 
+    #000000 6px, #000000 7px,
+    #696868 7px, #696868 8px, 
+    transparent 8px, transparent 9px, 
+    #000000 9px, #000000 10px, 
+    transparent 10px, transparent 11px
+  );
+  background-size: 100% 13px; /* Set the size of your "sprite" */
+  height: 13px; /* At least the height of your "sprite" */
+  width: 100%; /* Full width of the container */
+  background-position: left top; /* Start the pattern from the bottom-left corner */
+}

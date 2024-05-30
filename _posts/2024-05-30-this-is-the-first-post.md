@@ -7,7 +7,9 @@ I wrote it today.
 
 # This isn't EXACTLY wysiwyg
 
-but it does have a preview.
+but it does <span class="key-term">have</span> a preview.
+
+<div class="horizontal-bars"></div>
 
 Oh, the sid-eby-side does it.
 
