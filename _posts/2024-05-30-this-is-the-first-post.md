@@ -7,7 +7,9 @@ I wrote it today.
 
 # This is an H1
 
-a divider:
+a divider:     
+
+asdfasfsdf
 
 ---
 
@@ -52,4 +54,3 @@ These are our horizontal bars (css class), which works on html-in-markdown, but 
 An image:
 
 ![]({{ 'vaporware.png' | relative_url }})
-
