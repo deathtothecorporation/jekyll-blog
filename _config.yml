@@ -37,9 +37,16 @@ collections:
   podcasts:
     output: true
 
+tag_page_layout: tag
+tag_page_dir: tag
+
       # collections_dir: collections
 
 defaults:
+  - scope:
+      path: "tags"
+    values:
+      layout: "tag"
   - scope:
       path: ""
       type: "posts"

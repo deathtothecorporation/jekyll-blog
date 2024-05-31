@@ -1,0 +1,37 @@
+---
+layout: default
+title: Tags
+---
+
+<h1>Tags</h1>
+
+{% assign tags = '' | split: '' %} {% for post in site.posts %} {%
+assign post_tags = post.tags | join: ',' | split: ',' %} {% assign tags
+= tags | concat: post_tags | uniq %} {% endfor %} {% for podcast in
+site.podcasts %} {% assign podcast_tags = podcast.tags | join: ',' |
+split: ',' %} {% assign tags = tags | concat: podcast_tags | uniq %} {%
+endfor %}
+
+<ul>
+  {% for tag in tags %}
+  <li>
+    <a href="#{{ tag | slugify }}">{{ tag }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+{% for tag in tags %}
+<h2 id="{{ tag | slugify }}">{{ tag }}</h2>
+<ul>
+  {% for post in site.posts %} {% if post.tags contains tag %}
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+  {% endif %} {% endfor %} {% for podcast in site.podcasts %} {% if
+  podcast.tags contains tag %}
+  <li>
+    <a href="{{ podcast.url | relative_url }}">{{ podcast.title }}</a>
+  </li>
+  {% endif %} {% endfor %}
+</ul>
+{% endfor %}

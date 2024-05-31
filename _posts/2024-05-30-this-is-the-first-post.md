@@ -4,6 +4,8 @@ layout: post
 authors:
 - vc
 visible: true
+tags:
+- example
 ---
 
 I wrote it today.

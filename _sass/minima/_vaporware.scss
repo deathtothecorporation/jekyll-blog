@@ -32,16 +32,6 @@ em strong {
   line-height: normal;
 }
 
-a {
-  color: #00e;
-  @apply underline;
-}
-
-a:hover {
-  @apply cursor-pointer;
-  @apply font-semibold;
-}
-
 .social-media-list {
   a {
     color: $text-color;
@@ -88,7 +78,7 @@ code {
   display: inline-block;
   padding: 4px 8px;
   margin-right: 5px;
-  background-color: #f1f1f1;
+  background-color: $grey-color-light;
   border-radius: 4px;
   font-size: 14px;
 }
