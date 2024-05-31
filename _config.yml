@@ -29,6 +29,11 @@ github_username:  deathtothecorporation
 documentation_url: https://vaporware.gitbook.io/vaporware
 server: webrick
 
+header_pages:
+  - podcasts.html
+  - tags.html
+  - about.md
+
 show_excerpts: true
 
 collections:

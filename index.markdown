@@ -10,3 +10,5 @@ layout: home
 This is a page whose content sits above the "latest posts" section. It might be a good place for a quick intro and links back to the homepage.
 
 We can put images or something here?
+
+---
