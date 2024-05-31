@@ -1,7 +1,7 @@
 ---
 title: 'Episode 1: Taking the λ'
 layout: podcast
-date: '2023-05-29 08:00:00'
+date: '2024-06-04 08:00:00'
 categories:
 - podcasts
 visible: true
