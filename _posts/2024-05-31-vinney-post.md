@@ -1,7 +1,8 @@
 ---
-title: vinney post
+title: vinney solo post
 authors:
-  - vc
+- vc
+visible: true
 ---
 
-written by me
+this post only has one author

@@ -1,8 +1,8 @@
 ---
-title: This is the First Post
+title: This Post exemplifies some markdown stuff
 layout: post
 authors:
-  - vc
+- vc
 visible: true
 ---
 

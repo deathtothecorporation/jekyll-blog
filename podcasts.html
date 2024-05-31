@@ -6,7 +6,8 @@ title: Podcasts
 <h1>Podcast Episodes</h1>
 
 <ul>
-  {% for episode in site.podcasts reversed %}
+  {%- assign visible_content = site.podcasts | where: 'visible', true | sort: 'date' | reverse -%}
+  {% for episode in visible_content %}
   <li>
     <a href="{{ episode.url }}">{{ episode.title }}</a>
     <span>{{ episode.date | date: "%B %-d, %Y" }}</span>
