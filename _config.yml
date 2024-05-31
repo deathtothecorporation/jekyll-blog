@@ -29,6 +29,16 @@ github_username:  deathtothecorporation
 documentation_url: https://vaporware.gitbook.io/vaporware
 server: webrick
 
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      # author: "Vinney Cavallo"
+      # category: "General"
+      # tags: []
+
 # Build settings
 theme: minima
 plugins:
