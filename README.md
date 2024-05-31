@@ -72,3 +72,9 @@ Environment=PATH=/home/vcavallo/.rbenv/versions/3.1.2/bin:$PATH
 WantedBy=multi-user.target
 ```
 
+## Plunder cog hosting
+
+- `_plugins/post-write-put-cog.sh`
+  - Calls the following script after every site regeneration (write_
+- `/put-to-cog.sh`
+  - Does a cURL PUT to a local webserver cog. **Requires** you to update the script with the cog port number upon reboot.
