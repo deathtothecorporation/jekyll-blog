@@ -5,6 +5,8 @@ date: '2023-05-29 08:00:00'
 categories:
 - podcasts
 visible: true
+tags:
+- podcast
 ---
 
 Your podcast episode content goes here...
