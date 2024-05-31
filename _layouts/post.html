@@ -40,7 +40,10 @@ layout: default
           {%- assign author_id = page.authors[0] -%} {%- assign author =
           site.authors | where: 'identifier', author_id | first -%} {%- if
           author -%}
-          <a href="{{ author.url }}">{{ author.name }}</a>
+          <a href="{{ author.url }}">
+            {{ author.name }}
+            <img class="author-avatar" src="{{ author.avatar }}" />
+          </a>
           {%- endif -%}
         </span>
         {%- else -%}
@@ -48,7 +51,11 @@ layout: default
           {%- for author_id in page.authors -%} {%- assign author =
           site.authors | where: 'identifier', author_id | first -%} {%- if
           author -%}
-          <a href="{{ author.url }}">{{ author.name }}</a>{% unless
+          <a href="{{ author.url }}">
+            {{ author.name }}
+            <img class="author-avatar" src="{{ author.avatar }}" />
+          </a>
+          {% unless
           forloop.last %}, {% endunless %} {%- endif -%} {%- endfor -%}
         </span>
         {%- endif -%}

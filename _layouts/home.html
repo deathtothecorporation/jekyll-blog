@@ -16,8 +16,7 @@ list_title: "Latest Posts"
     <ul class="post-list">
       {%- for item in visible_content -%}
       <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ item.date | date: date_format }}</span>
+
         <div>
           {% if item.image %}
           <div class="hero-index">
@@ -31,7 +30,47 @@ list_title: "Latest Posts"
               {{ item.title | escape }}
             </a>
           </h3>
-        <div>
+        </div>
+
+        <div class="list-meta">
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta">{{ item.date | date: date_format }}</span>
+
+          {%- if item.authors -%} <span class="authors-dot">•</span>
+        <span
+          itemprop="author"
+          itemscope
+          itemtype="http://schema.org/Person"
+        >
+          {%- assign author_count = item.authors | size -%} {%- if
+          author_count == 1 -%}
+          <span class="p-author h-card" itemprop="name">
+            {%- assign author_id = item.authors[0] -%} {%- assign author =
+            site.authors | where: 'identifier', author_id | first -%} {%- if
+            author -%}
+            <a href="{{ author.url }}">
+              {{ author.name }}
+              <img class="author-avatar" src="{{ author.avatar }}" />
+            </a>
+            {%- endif -%}
+          </span>
+          {%- else -%}
+          <span class="p-author h-card" itemprop="name">
+            {%- for author_id in item.authors -%} {%- assign author =
+            site.authors | where: 'identifier', author_id | first -%} {%- if
+            author -%}
+            <a href="{{ author.url }}">
+              {{ author.name }}
+              <img class="author-avatar" src="{{ author.avatar }}" />
+            </a>
+            {% unless
+            forloop.last %}, {% endunless %} {%- endif -%} {%- endfor -%}
+          </span>
+          {%- endif -%}
+        </span>
+          {%- endif -%}
+        </div>
+
         {%- if site.show_excerpts -%}
           {{ item.excerpt }}
         {%- endif -%}
