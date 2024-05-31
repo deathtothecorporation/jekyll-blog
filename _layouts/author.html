@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<article>
+  <h1>{{ page.name }}</h1>
+  <img src="{{ page.avatar }}" alt="{{ page.name }}'s avatar">
+  <p>{{ page.bio }}</p>
+
+  <h2>Posts by {{ page.name }}</h2>
+  <ul>
+    {% assign authored_posts = site.posts | where: 'author', page.identifier %}
+    {% for post in authored_posts %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</article>

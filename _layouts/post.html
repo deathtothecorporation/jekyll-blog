@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+{% assign author = site.authors | where: 'identifier', page.author | first %}
+
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
@@ -10,8 +12,12 @@ layout: default
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {%- if author -%}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span class="p-author h-card" itemprop="name">
+            <a href="{{ author.url }}">{{ author.name }}</a>
+          </span>
+        </span>
       {%- endif -%}</p>
   </header>
 
