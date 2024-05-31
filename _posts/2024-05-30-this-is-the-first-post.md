@@ -6,7 +6,7 @@ authors:
 visible: true
 tags:
 - example
-image: martin-adams-pTCcJSBOTxY-unsplash.jpg
+image: assets/images/martin-adams-pTCcJSBOTxY-unsplash.jpg
 ---
 
 I wrote it today.
