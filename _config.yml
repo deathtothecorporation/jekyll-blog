@@ -59,6 +59,7 @@ defaults:
       layout: "post"
       authors: ["cve"]
       visible: false
+      image: "assets/images/vaporware-default.avif"
         # categories: [writing]
   - scope:
       path: ""
@@ -73,6 +74,7 @@ defaults:
         # categories: [podcasts]
       date: "2024-01-01 12:00:00"
       visible: false
+      image: "assets/images/vaporware-default.avif"
 
 jekyll-admin:
   collections:

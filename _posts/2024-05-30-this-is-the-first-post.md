@@ -6,7 +6,7 @@ authors:
 visible: true
 tags:
 - example
-image: assets/images/martin-adams-pTCcJSBOTxY-unsplash.jpg
+image: assets/images/vaporware-default.avif
 ---
 
 I wrote it today.
