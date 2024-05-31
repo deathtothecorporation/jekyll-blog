@@ -19,6 +19,13 @@ list_title: "Latest Posts"
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         <span class="post-meta">{{ item.date | date: date_format }}</span>
         <div>
+          {% if item.image %}
+          <div class="hero-index">
+            <a class="post-link" href="{{ item.url | relative_url }}">
+              <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
+            </a>
+          </div>
+          {% endif %}
           <h3 style="display: inline-block">
             <a class="post-link" href="{{ item.url | relative_url }}">
               {{ item.title | escape }}

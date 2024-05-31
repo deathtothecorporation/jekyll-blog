@@ -69,7 +69,7 @@ defaults:
       path: ""
       type: "podcasts"
     values:
-      layout: "post"
+      layout: "podcast"
         # categories: [podcasts]
       date: "2024-01-01 12:00:00"
       visible: false

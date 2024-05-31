@@ -7,10 +7,37 @@ title: Podcasts
 
 <ul>
   {%- assign visible_content = site.podcasts | where: 'visible', true | sort: 'date' | reverse -%}
-  {% for episode in visible_content %}
-  <li>
-    <a href="{{ episode.url }}">{{ episode.title }}</a>
-    <span>{{ episode.date | date: "%B %-d, %Y" }}</span>
-  </li>
-  {% endfor %}
+    <ul class="post-list">
+      {%- for item in visible_content -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ item.date | date: date_format }}</span>
+        <div>
+          {% if item.image %}
+          <div class="hero-podcast-index">
+            <a class="post-link" href="{{ item.url | relative_url }}">
+              <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
+            </a>
+          </div>
+          {% endif %}
+          <h3 style="display: inline-block">
+            <a class="post-link" href="{{ item.url | relative_url }}">
+              {{ item.title | escape }}
+            </a>
+          </h3>
+        <div>
+        {%- if site.show_excerpts -%}
+          {{ item.excerpt }}
+        {%- endif -%}
+        {%- if item.tags.size > 0 -%}
+        <div class="tag-chips">
+          {%- for tag in item.tags -%}
+          <a href="{{ '/tags.html' | relative_url }}#{{ tag | slugify }}" class="tag-chip">{{ tag }}</a>
+          {%- endfor -%}
+        </div>
+        {%- endif -%}
+
+      </li>
+      {%- endfor -%}
+    </ul>
 </ul>
