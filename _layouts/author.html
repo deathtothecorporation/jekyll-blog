@@ -9,7 +9,7 @@ layout: default
 
   <h2>Posts by {{ page.name }}</h2>
   <ul>
-    {% assign authored_posts = site.posts | where: 'author', page.identifier %}
+    {% assign authored_posts = site.posts | where_exp: 'post', 'post.authors contains page.identifier' | where: 'visible', true %}
     {% for post in authored_posts %}
       <li>
         <a href="{{ post.url }}">{{ post.title }}</a>

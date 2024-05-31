@@ -1,6 +1,7 @@
 ---
 title: vinney post
-author: vinney-cavallo
+authors:
+  - vc
 ---
 
 written by me

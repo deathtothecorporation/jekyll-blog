@@ -1,6 +1,9 @@
 ---
 title: This is the First Post
 layout: post
+authors:
+  - vc
+visible: true
 ---
 
 I wrote it today.
@@ -52,4 +55,3 @@ These are our horizontal bars (css class), which works on html-in-markdown, but 
 An image:
 
 ![]({{ 'vaporware.png' | relative_url }})
-

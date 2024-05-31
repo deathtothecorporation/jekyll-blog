@@ -1,32 +1,60 @@
 ---
 layout: default
 ---
-{% assign author = site.authors | where: 'identifier', page.author | first %}
 
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-
+<article
+  class="post h-entry"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <h1 class="post-title p-name" itemprop="name headline">
+      {{ page.title | escape }}
+    </h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
+      <time
+        class="dt-published"
+        datetime="{{ page.date | date_to_xmlschema }}"
+        itemprop="datePublished"
+      >
+        {%- assign date_format = site.minima.date_format | default: "%b
+        %-d, %Y" -%} {{ page.date | date: date_format }}
       </time>
-      {%- if author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <span class="p-author h-card" itemprop="name">
-            <a href="{{ author.url }}">{{ author.name }}</a>
-          </span>
+
+      {%- if page.authors -%} •
+      <span
+        itemprop="author"
+        itemscope
+        itemtype="http://schema.org/Person"
+      >
+        {%- assign author_count = page.authors | size -%} {%- if
+        author_count == 1 -%}
+        <span class="p-author h-card" itemprop="name">
+          {%- assign author_id = page.authors[0] -%} {%- assign author =
+          site.authors | where: 'identifier', author_id | first -%} {%- if
+          author -%}
+          <a href="{{ author.url }}">{{ author.name }}</a>
+          {%- endif -%}
         </span>
-      {%- endif -%}</p>
+        {%- else -%}
+        <span class="p-author h-card" itemprop="name">
+          {%- for author_id in page.authors -%} {%- assign author =
+          site.authors | where: 'identifier', author_id | first -%} {%- if
+          author -%}
+          <a href="{{ author.url }}">{{ author.name }}</a>{% unless
+          forloop.last %}, {% endunless %} {%- endif -%} {%- endfor -%}
+        </span>
+        {%- endif -%}
+      </span>
+      {%- endif -%}
+    </p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
 
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
+  {%- if site.disqus.shortname -%} {%- include disqus_comments.html -%}
   {%- endif -%}
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>

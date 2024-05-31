@@ -5,15 +5,12 @@ layout: default
 <h1>Authors</h1>
 
 <div>
-
-  {% for author in site.authors %}
-    {% assign authored_posts = site.posts | where: 'author', author.identifier %}
-      {% if authored_posts.size > 0 %}
-    <li>
-      <h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
-      <img src="{{ author.avatar }}" alt="{{ author.name }}'s avatar">
-    </li>
-    {% endif %}
-  {% endfor %}
-
+  {% for author in site.authors %} {% assign authored_posts = site.posts
+  | where_exp: 'post', 'post.authors contains author.identifier' |
+  where: 'visible', true %} {% if authored_posts.size > 0 %}
+  <li>
+    <h2><a href="{{ author.url }}">{{ author.name }}</a></h2>
+    <img src="{{ author.avatar }}" alt="{{ author.name }}'s avatar" />
+  </li>
+  {% endif %} {% endfor %}
 </div>

@@ -1,0 +1,12 @@
+---
+title: Episode 2 - The Next One
+layout: post
+date: '2024-06-01 00:00:00'
+categories:
+- podcasts
+---
+
+some sutff asdfasfasd
+edited
+
+epsi 2

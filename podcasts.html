@@ -1,0 +1,15 @@
+---
+layout: default
+title: Podcasts
+---
+
+<h1>Podcast Episodes</h1>
+
+<ul>
+  {% for episode in site.podcasts reversed %}
+  <li>
+    <a href="{{ episode.url }}">{{ episode.title }}</a>
+    <span>{{ episode.date | date: "%B %-d, %Y" }}</span>
+  </li>
+  {% endfor %}
+</ul>

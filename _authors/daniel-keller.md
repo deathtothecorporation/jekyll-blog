@@ -1,6 +1,6 @@
 ---
-identifier: jack-ek
-name: Jack Ek
+identifier: dk
+name: Daniel Keller
 bio: Bio here
 avatar: /assets/images/john-doe.jpg
 ---

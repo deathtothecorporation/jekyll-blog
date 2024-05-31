@@ -29,11 +29,15 @@ github_username:  deathtothecorporation
 documentation_url: https://vaporware.gitbook.io/vaporware
 server: webrick
 
+show_excerpts: true
+
 collections:
   authors:
     output: true
+  podcasts:
+    output: true
 
-collections_dir: collections
+      # collections_dir: collections
 
 defaults:
   - scope:
@@ -41,14 +45,28 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      author: "vinney-cavallo"
-      # category: "General"
-      # tags: []
+      authors: ["cve"]
+      visible: false
+        # categories: [writing]
   - scope:
       path: ""
       type: "authors"
     values:
       layout: "author"
+  - scope:
+      path: ""
+      type: "podcasts"
+    values:
+      layout: "post"
+        # categories: [podcasts]
+      date: "2024-01-01 12:00:00"
+      visible: false
+
+jekyll-admin:
+  collections:
+    - posts
+    - authors
+    - podcasts
 
 # Build settings
 theme: minima
