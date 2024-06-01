@@ -37,7 +37,7 @@ gem 'rack-protection', '~> 2.0'
 
 # gem 'jekyll-seo-tag'
 
-group :jekyll_plugins do
-  gem 'jekyll-admin'
-end
+# group :jekyll_plugins do
+#   gem 'jekyll-admin'
+# end
 
