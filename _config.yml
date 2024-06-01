@@ -22,8 +22,13 @@ title: Vaporware Blog
 email: founders@vaporware.network
 description: >- # this means to ignore newlines until "baseurl:"
   The blog for the Vaporware project
+tagline: Digital membranes and Nock heresy
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://blog.vaporware.network" # the base hostname & protocol for your site, e.g. http://example.com
+twitter:
+  username: __vaporware__
+  card: summary
+logo: "https://vaporware.network/images/vaporware-appliances-30s-200x200-preview.jpg"
 twitter_username: __vaporware__
 github_username:  deathtothecorporation
 documentation_url: https://vaporware.gitbook.io/vaporware
@@ -60,6 +65,7 @@ defaults:
       authors: ["cve"]
       visible: false
       image: "assets/images/vaporware-default.avif"
+      description: "Provide a short description which will be used on social share cards"
         # categories: [writing]
   - scope:
       path: ""
@@ -75,6 +81,7 @@ defaults:
       date: "2024-01-01 12:00:00"
       visible: false
       image: "assets/images/vaporware-default.avif"
+      description: "Provide a short description which will be used on social share cards"
 
 jekyll-admin:
   collections:
@@ -86,6 +93,7 @@ jekyll-admin:
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.

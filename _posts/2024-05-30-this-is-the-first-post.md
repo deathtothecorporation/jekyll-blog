@@ -7,6 +7,7 @@ visible: true
 tags:
 - example
 image: assets/images/vaporware-default.avif
+description: This post is an example of how markdown stuff works
 ---
 
 I wrote it today.
