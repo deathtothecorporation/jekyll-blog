@@ -32,6 +32,12 @@ em strong {
   line-height: normal;
 }
 
+.site-footer {
+  a {
+    font-weight: bold;
+  }
+}
+
 .social-media-list {
   a {
     color: $text-color;
