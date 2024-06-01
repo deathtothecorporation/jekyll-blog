@@ -156,7 +156,7 @@ footer p {
 }
 
 .list-meta {
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: calc($spacing-unit / 2);
   a {
     color: $grey-color;
     &:hover {
@@ -173,7 +173,7 @@ footer p {
 
 .authors-dot {
   color: $grey-color;
-  margin-left: $spacing-unit / 4;
+  margin-left: calc($spacing-unit / 4);
 }
 
 .hero-image {
@@ -191,7 +191,7 @@ footer p {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: calc($spacing-unit / 2);
 }
 
 .hero-index > img,
