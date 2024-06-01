@@ -1,22 +1,22 @@
 ---
-title: This Post exemplifies some markdown stuff
 layout: post
+title: This Post exemplifies some markdown stuff
 authors:
-- vc
-visible: true
+  - vc
 tags:
-- example
-image: assets/images/vaporware-default.avif
+  - example
+date: 2024-06-01T17:48:00.000Z
 description: This post is an example of how markdown stuff works
+image: assets/images/vaporware-default.avif
+visible: true
 ---
-
 I wrote it today.
 
 # This is an H1
 
 a divider:
 
----
+- - -
 
 ^ that was a divider.
 
@@ -26,22 +26,22 @@ stuff
 
 ### More headings
 
-**bold** *italic* **_bold italic_** _**italic bold**_ `inline code`.
+**bold** *italic* ***bold italic*** ***italic bold*** `inline code`.
 
-```js
+````js
 // ``` code block
 var = "wut"
-```
+````
 
 {% highlight js %}
 // highlight code block
 var = "wut"
 {% endhighlight %}
 
-```sire
+````sire
 // ``` code block
 @ thing | barNat 10
-```
+````
 
 > quote quote
 >
@@ -55,7 +55,6 @@ These are our horizontal bars (css class), which works on html-in-markdown, but 
 
 <div class="horizontal-bars"></div>
 
-
 An image:
 
-![]({{ 'vaporware.png' | relative_url }})
+![](_site/martin-adams-pTCcJSBOTxY-unsplash.jpg)
