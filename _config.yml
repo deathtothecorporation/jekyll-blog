@@ -85,11 +85,11 @@ defaults:
       image: "assets/images/vaporware-default.avif"
       description: "Provide a short description which will be used on social share cards"
 
-jekyll-admin:
-  collections:
-    - posts
-    - authors
-    - podcasts
+        # jekyll-admin:
+        #   collections:
+        #     - posts
+        #     - authors
+        #     - podcasts
 
 # Build settings
 theme: minima
