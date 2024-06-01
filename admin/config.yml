@@ -1,14 +1,14 @@
 backend:
   name: github
-  branch: main # Branch to update (optional; defaults to master)
+  branch: master
   repo: deathtothecorporation/jekyll-blog
 
 media_folder: "assets/uploads"
 public_folder: "_site"
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Written Posts" # Used in the UI
     folder: "_posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
