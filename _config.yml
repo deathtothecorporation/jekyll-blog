@@ -44,6 +44,7 @@ show_excerpts: true
 collections:
   authors:
     output: true
+    permalink: /authors/:name/
   podcasts:
     output: true
     permalink: /podcasts/:title/
