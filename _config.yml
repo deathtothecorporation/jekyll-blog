@@ -46,7 +46,7 @@ collections:
     output: true
   podcasts:
     output: true
-    permalink: /podcasts/:title
+    permalink: /podcasts/:title/
 
 tag_page_layout: tag
 tag_page_dir: tag
