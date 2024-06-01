@@ -46,6 +46,7 @@ collections:
     output: true
   podcasts:
     output: true
+    permalink: /podcasts/:title
 
 tag_page_layout: tag
 tag_page_dir: tag
@@ -93,7 +94,7 @@ jekyll-admin:
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
+  # - jekyll-seo-tag
 
 # Exclude from processing.
 # The following items will not be processed, by default.
