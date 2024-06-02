@@ -64,7 +64,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      authors: ["cve"]
       visible: false
       image: "assets/images/vaporware-default.avif"
       description: "Provide a short description which will be used on social share cards"

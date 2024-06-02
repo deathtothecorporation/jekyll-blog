@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: master
+    # name: github
+    # branch: master
     # repo: deathtothecorporation/jekyll-blog
 
 media_folder: "assets/images"
@@ -15,12 +17,22 @@ collections:
     fields: # The fields for each document, usually in front matter
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Authors", name: "authors", widget: "list", default: ["cve"] }
+        # - { label: "Authors", name: "authors", widget: "list", default: ["cve"] }
       - { label: "Tags", name: "tags", widget: "list", default: ["written"] }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Short Description", name: "description", widget: "string", default: "Provide a short description which will be used on social share cards" }
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Visible?", name: "visible", widget: "boolean", default: false }
+      - {
+          label: 'Authors',
+          name: 'authors',
+          widget: 'relation',
+          collection: 'authors',
+          multiple: true,
+          display_fields: [name],
+          search_fields: [name],
+          value_field: 'identifier',
+        }
       - { label: "Body", name: "body", widget: "markdown" }
   - name: "podcasts"
     label: "Podcasts"
@@ -36,3 +48,16 @@ collections:
       - { label: "Episode Art (square please)", name: "image", widget: "image" }
       - { label: "Visible?", name: "visible", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown" }
+  - name: 'authors'
+    label: 'Authors'
+    folder: '_authors/'
+    create: true
+    editor:
+      preview: false
+    fields:
+      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'author' }
+      - { label: 'Initials', name: 'identifier', widget: 'string' }
+      - { label: 'Display Name', name: 'name', widget: 'string' }
+      - { label: 'Avatar', name: 'avatar', widget: 'string' }
+      - { label: 'Email (optional)', name: 'email', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }

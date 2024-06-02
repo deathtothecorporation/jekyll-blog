@@ -1,8 +1,6 @@
 ---
 layout: post
 title: This Post exemplifies some markdown stuff
-authors:
-  - vc
 tags:
   - example
 date: 2024-06-01T17:48:00.000Z
