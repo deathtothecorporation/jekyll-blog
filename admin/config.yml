@@ -1,9 +1,9 @@
 backend:
-  name: github
+  name: git-gateway
   branch: master
-  repo: deathtothecorporation/jekyll-blog
+    # repo: deathtothecorporation/jekyll-blog
 
-media_folder: "assets/uploads"
+media_folder: "assets/images"
 public_folder: "_site"
 
 collections:
@@ -20,5 +20,19 @@ collections:
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Short Description", name: "description", widget: "string", default: "Provide a short description which will be used on social share cards" }
       - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Visible?", name: "visible", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "podcasts"
+    label: "Podcasts"
+    folder: "_podcasts"
+    create: true
+    slug: "{{title}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "podcast" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["podcast"] }
+      - { label: "Air Date", name: "date", widget: "datetime" }
+      - { label: "Short Description", name: "description", widget: "string", default: "Provide a short description which will be used on social share cards" }
+      - { label: "Episode Art (square please)", name: "image", widget: "image" }
       - { label: "Visible?", name: "visible", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown" }
