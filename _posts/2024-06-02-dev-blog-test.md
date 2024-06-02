@@ -1,6 +1,6 @@
 ---
 layout: post
-title: dev blog test
+title: 2 dev blog test
 tags:
   - written
 date: 2024-06-02T12:23:00.000Z
