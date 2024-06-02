@@ -10,5 +10,8 @@ visible: true
 authors:
   - vc
   - jk
+  - cve
+  - dk
+  - s
 ---
 testing
