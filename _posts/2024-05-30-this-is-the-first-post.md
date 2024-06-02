@@ -1,14 +1,16 @@
 ---
 layout: post
 title: This Post exemplifies some Markdown Stuff
-authors:
-  - vc
 tags:
   - example
 date: 2024-06-01T17:48:00.000Z
 description: This post is an example of how markdown stuff works
 image: assets/images/vaporware-default.avif
 visible: true
+authors:
+  - vc
+  - jk
+  - dk
 ---
 I wrote it today.
 
