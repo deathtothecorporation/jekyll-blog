@@ -1,6 +1,6 @@
 ---
 layout: post
-title: This Post exemplifies some markdown stuff
+title: This Post exemplifies some Markdown Stuff
 authors:
   - vc
 tags:
