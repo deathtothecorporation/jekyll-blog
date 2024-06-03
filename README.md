@@ -1,10 +1,13 @@
 # Vaporware Jekyll Blog
 
+# GUI editor
+
+- Be added to the Netlify identity system
+- Go to [https://vaporware-blog.netlify.app/admin](https://vaporware-blog.netlify.app/admin)
+
 - Ruby 3.*
 - `bundle install`
 - `bundle exec jekyll serve`
-
-Visit `/admin` for the editing GUI.
 
 ## Hosting
 
@@ -102,5 +105,3 @@ AmbientCapabilities=CAP_NET_BIND_SERVICE
 [Install]
 WantedBy=multi-user.target
 ```
-
-
