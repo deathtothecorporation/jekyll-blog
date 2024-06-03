@@ -43,6 +43,7 @@ show_excerpts: true
 
 exclude:
   - sh/
+  - log/
 
 collections:
   authors:
