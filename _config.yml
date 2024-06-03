@@ -41,6 +41,9 @@ header_pages:
 
 show_excerpts: true
 
+exclude:
+  - sh/
+
 collections:
   authors:
     output: true
