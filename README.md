@@ -8,23 +8,78 @@ Visit `/admin` for the editing GUI.
 
 ## Hosting
 
-- `bundle exec jekyll serve --host 0.0.0.0`
+- install Go (ugh)
+- install Caddy with custom build to support `exec`: [xcaddy](https://github.com/caddyserver/xcaddy) [caddy-exec](https://github.com/abiosoft/caddy-exec)
+- use the binary built from above for running caddy (see systemd service later)
+
+### Caddyfile
 
 `/etc/caddy/Caddyfile`:
 
 ```
 blog.vaporware.network {
-    reverse_proxy localhost:4000
-    basicauth /admin/* {
-        Username <hashed-password>
-    }
-    basicauth /_api/* {
-        Username <hashed-password>
+    root * /home/vcavallo/vaporware-blog/_site
+    encode zstd gzip
+    file_server
+
+    route /webhook {
+      exec {
+        comand /home/vcavallo/vaporware-blog/sh/github-webhook.sh
+      }
     }
 }
 ```
 
-`/etc/systemd/system/caddy.service`:
+### Git webhook and post-receive
+
+#### post-receive
+
+The `/webhook` endpoint above receives pings when the `master` branch receives updates.  
+It then calls the `sh/github-webhook.sh` script, which checks the branch and then calls the `post-receive` hook (which you must create. see below)
+
+```
+# .git/hook/post-receive
+
+#!/bin/bash
+
+# Navigate to the repository directory
+cd /home/vcavallo/vaporware-blog
+
+# Pull the latest changes from the remote repository
+if ! git pull; then
+  echo "Error: Failed to pull latest changes from the remote repository."
+  exit 1
+fi
+
+# build site and capture output
+# Make sure to use proper bundle path
+jekyll_output=$(/home/vcavallo/.rbenv/shims/bundle exec jekyll build 2>&1)
+
+# Check if the jekyll build command succeeded
+if [ $? -ne 0 ]; then
+  echo "Error: Jekyll build failed."
+  echo "Jekyll build output:"
+  echo "$jekyll_output"
+  exit 1
+fi
+
+echo "Jekyll build completed successfully."
+```
+
+#### GitHub webhook
+
+- Create a new webhook in the repository: `Settings > Webhooks`
+  - payload URL: `https://blog.vaporware.network/webhook`
+  - content type: `application/json`
+  - secret: [leave blank]
+  - SSL: enable
+  - Which events? "Just the `push` event"
+  - Active: checked
+
+
+### Systemd service for caddy:
+
+`/etc/systemd/system/caddy.service` (`ExecStart` and `ExecReload` reflect the binary built above)
 
 ```
 [Unit]
@@ -33,10 +88,10 @@ Documentation=https://caddyserver.com/docs/
 After=network.target
 
 [Service]
-User=caddy
-Group=caddy
-ExecStart=/usr/bin/caddy run --environ --config /etc/caddy/Caddyfile
-ExecReload=/usr/bin/caddy reload --config /etc/caddy/Caddyfile
+User=vcavallo
+Group=vcavallo
+ExecStart=/home/vcavallo/caddy/bin/caddy run --environ --config /etc/caddy/Caddyfile
+ExecReload=/home/vcavallo/caddy/bin/caddy reload --config /etc/caddy/Caddyfile
 TimeoutStopSec=5s
 LimitNOFILE=1048576
 LimitNPROC=512
@@ -45,30 +100,10 @@ ProtectSystem=full
 AmbientCapabilities=CAP_NET_BIND_SERVICE
 
 [Install]
-WantedBy=multi-user.target
-```
 
-`/etc/systemd/system/start-blog.service`:
-
-```
-[Unit]
-Description=blog.vaporware.network
-Requires=network.target
-
-[Service]
-Type=simple
-User=vcavallo
-Group=vcavallo
-WorkingDirectory=/home/vcavallo/vaporware-blog
-ExecStart=/home/vcavallo/.rbenv/versions/3.1.2/bin/jekyll serve --verbose --host 0.0.0.0
-TimeoutSec=30
-RestartSec=15s
-Restart=always
-
-Environment=GEM_HOME=/home/vcavallo/.rbenv/versions/3.1.2/lib/ruby/gems
-Environment=PATH=/home/vcavallo/.rbenv/versions/3.1.2/bin:$PATH
 
 [Install]
 WantedBy=multi-user.target
 ```
+
 
