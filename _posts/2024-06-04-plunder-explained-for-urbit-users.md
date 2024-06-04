@@ -41,7 +41,7 @@ In contrast, Urbit invents an entirely new axiomatic computing system. At Lambda
 
 His solution to this problem was Nock, “a tool for defining higher-level languages - comparable to the lambda calculus, but meant as foundational system software rather than foundational metamathematics.” To his great credit, retrofitting lambda calculus wouldn’t have seemed possible without the invention of Nock in the first place. Still, if you know a better path, why not take it?
 
-[Moron Lab post](https://moronlab.blogspot.com/2010/01/nock-maxwells-equations-of-software.html]
+[Moron Lab post](https://moronlab.blogspot.com/2010/01/nock-maxwells-equations-of-software.html)
 
 
 
