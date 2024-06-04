@@ -3,7 +3,7 @@ layout: post
 title: Plunder, explained for Urbit users
 tags:
   - written
-date: 2024-06-05T12:00:00.000Z
+date: 2024-06-04T19:14:00.000Z
 description: Provide a short description which will be used on social share cards
 image: https://blog.vaporware.network/assets/images/vaporware-default.avif
 visible: true
