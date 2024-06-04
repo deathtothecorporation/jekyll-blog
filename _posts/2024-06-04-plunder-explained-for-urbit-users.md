@@ -10,8 +10,6 @@ visible: true
 authors:
   - cve
 ---
-# Plunder, explained for Urbit users
-
 This article is a high level introduction to Plunder for the interested Urbit user. If you are not already familiar with Urbit, we suggest you skip this article and check out Plunder’s technical documentation instead. Plunder is fundamentally working towards a similar set of goals as Urbit, but diverges in two important ways. 
 
 
