@@ -59,5 +59,6 @@ collections:
       - { label: 'Initials', name: 'identifier', widget: 'string' }
       - { label: 'Display Name', name: 'name', widget: 'string' }
       - { label: 'Avatar', name: 'avatar', widget: 'string' }
+      - { label: "Bio", name: "bio", widget: "string" }
       - { label: 'Email (optional)', name: 'email', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
