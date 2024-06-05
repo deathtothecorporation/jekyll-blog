@@ -3,6 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
+image: https://vaporware.network/images/vaporware-appliances-30s-200x200-preview.jpg
 ---
 
 “_Society will develop a new kind of servitude which covers the surface of society with a network of complicated rules, through which the most original minds and the most energetic characters cannot penetrate. It does not tyrannise but it compresses, enervates, extinguishes, and stupefies a people, till each nation is reduced to nothing better than a flock of timid and industrious animals, of which the government is the shepherd._”  
