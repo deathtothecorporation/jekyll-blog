@@ -244,6 +244,16 @@ footer p {
   object-position: center;
 }
 
+.podcast-image-play {
+  margin-bottom: $spacing-unit;
+  .player {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .hero-index > img,
 .hero-index > a > img {
   width: 100%;

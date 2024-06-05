@@ -8,12 +8,6 @@ layout: default
   itemtype="http://schema.org/BlogPosting"
 >
 
-  {% if page.image %}
-  <div class="hero-podcast">
-    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-  </div>
-  {% endif %}
-
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">
       {{ page.title | escape }}
@@ -64,7 +58,23 @@ layout: default
     </p>
   </header>
 
+  <div class="podcast-image-play">
+  {% if page.image %}
+  <div class="hero-podcast">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  </div>
+  {% endif %}
+  <div class="player">
+        <audio controls preload="auto">
+        <source src="{{ page.source_url }}" type="audio/mp3">
+    </audio>
+  </div>
+  </div>
+
   <div class="post-content e-content" itemprop="articleBody">
+    <div>
+      {{ page.description | markdownify }}
+    </div>
     {{ content }}
   </div>
 
