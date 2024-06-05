@@ -71,9 +71,13 @@ list_title: "Latest Posts"
           {%- endif -%}
         </div>
 
-        {%- if site.show_excerpts -%}
-          {{ item.excerpt }}
+        {%- if item.collection == "podcasts" -%}
+            {{ item.summary }}
         {%- endif -%}
+        {%- if item.collection == "posts" -%}
+          {{ item.description }}
+        {%- endif -%}
+
         {%- if item.tags.size > 0 -%}
         <div class="tag-chips">
           {%- for tag in item.tags -%}

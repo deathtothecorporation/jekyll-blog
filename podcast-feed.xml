@@ -1,0 +1,39 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>{{ site.podcast_title | xml_escape }}</title>
+    <description>{{ site.podcast_description | xml_escape }}</description>
+    <link>{{ site.url }}{{ site.baseurl }}/podcasts.html</link>
+    <atom:link href="{{ "/podcast-feed.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml"/>
+    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <generator>Jekyll v{{ jekyll.version }}</generator>
+    <itunes:author>{{ site.author | xml_escape }}</itunes:author>
+    <itunes:summary>{{ site.podcast_description | xml_escape }}</itunes:summary>
+    <itunes:owner>
+      <itunes:name>{{ site.author | xml_escape }}</itunes:name>
+      <itunes:email>{{ site.email | xml_escape }}</itunes:email>
+    </itunes:owner>
+    <itunes:image href="{{ site.logo | prepend: site.baseurl | prepend: site.url }}"/>
+    <itunes:category text="Technology"/>
+    <itunes:explicit>no</itunes:explicit>
+    {% for episode in site.podcasts %}
+    <item>
+      <title>{{ episode.title | xml_escape }}</title>
+      <description>{{ episode.summary | xml_escape }}</description>
+      <pubDate>{{ episode.date | date_to_rfc822 }}</pubDate>
+      <link>{{ episode.url | prepend: site.baseurl | prepend: site.url }}</link>
+      <guid isPermaLink="true">{{ episode.url | prepend: site.baseurl | prepend: site.url }}</guid>
+      <enclosure url="{{ episode.source_url }}" length="{{ episode.length }}" type="audio/mpeg"/>
+      <itunes:author>{{ episode.author | xml_escape }}</itunes:author>
+      <itunes:summary>{{ episode.description | xml_escape }}</itunes:summary>
+      <itunes:duration>{{ episode.duration }}</itunes:duration>
+      <itunes:explicit>true</itunes:explicit>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

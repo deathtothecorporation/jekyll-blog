@@ -20,7 +20,7 @@ collections:
         # - { label: "Authors", name: "authors", widget: "list", default: ["cve"] }
       - { label: "Tags", name: "tags", widget: "list", default: ["written"] }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Short Description", name: "description", widget: "string", default: "Provide a short description which will be used on social share cards" }
+      - { label: "Short Description", name: "description", widget: "string", default: "Provide a short description which will be used on social share cards and the home page index" }
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Visible?", name: "visible", widget: "boolean", default: false }
       - {
@@ -45,10 +45,10 @@ collections:
       - { label: "Tags", name: "tags", widget: "list", default: ["podcast"] }
       - { label: "S3 link", name: "source_url", widget: "string" }
       - { label: "Air Date", name: "date", widget: "datetime" }
-      - { label: "Longer Description", name: "description", widget: "markdown", default: "Longer description" }
-      - { label: "Quick Summary", name: "summary", widget: "string", default: "Short summary for podcast feeds and social links" }
-      - { label: "Length (total seconds)", name: "length", widget: "number" }
-      - { label: "Duration (hh:mm:ss)", name: "duration", widget: "string" }
+      - { label: "Longer Description (optional)", name: "description", widget: "markdown", default: "Longer description" }
+      - { label: "Quick Summary", name: "summary", widget: "string", default: "Short summary for podcast feeds, social links and homepage index" }
+      - { label: "Length (in bytes)", name: "length", widget: "number" }
+      - { label: "Duration (in total seconds)", name: "duration", widget: "number" }
       - { label: "Episode Art (square please)", name: "image", widget: "image" }
       - { label: "Visible?", name: "visible", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown" }

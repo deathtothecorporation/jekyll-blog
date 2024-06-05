@@ -5,6 +5,8 @@ title: Podcasts
 
 <h1>Podcast Episodes</h1>
 
+<p>To add our podcast to your player of choice, use <a href="{{ "/podcast-feed.xml" | prepend: site.baseurl | prepend: site.url }}">this rss url</a>.</p>
+
 <ul>
   {%- assign visible_content = site.podcasts | where: 'visible', true | sort: 'date' | reverse -%}
     <ul class="post-list">
@@ -41,3 +43,5 @@ title: Podcasts
       {%- endfor -%}
     </ul>
 </ul>
+
+<link rel="alternate" type="application/rss+xml" title="Podcast Feed" href="{{ "/podcast-feed.xml" | prepend: site.baseurl | prepend: site.url }}">
