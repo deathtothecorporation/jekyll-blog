@@ -5,11 +5,11 @@
 layout: home
 ---
 
-# Emissions
+“_Society will develop a new kind of servitude which covers the surface of society with a network of complicated rules, through which the most original minds and the most energetic characters cannot penetrate. It does not tyrannise but it compresses, enervates, extinguishes, and stupefies a people, till each nation is reduced to nothing better than a flock of timid and industrious animals, of which the government is the shepherd._”  
+-- Alexis de Tocqueville
 
-We should have a short description here and a link to [vaporware.network](https://vaporware.network) (so we can keep it out of the footer.)
+[vaporware.network](https://vaporware.network)
 
-This is a page whose content sits above the "latest posts" section. It might be a good place for a quick intro and links back to the homepage.
-
-
+<div style="height: 0.5em;">
+</div>
 ---
