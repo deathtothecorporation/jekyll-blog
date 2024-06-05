@@ -60,8 +60,8 @@ Plunder does not provide a universal networking or identity layer, whereas Urbit
 
 Plunder doesn’t include kernel modules or Urbit-like “vanes” at the base layer. Plunder has a (yet unfinished) notion of a SYSCALL, which defines a frozen interface for interacting with external environments. Roughly speaking, a Plunder runtime knows something about the affordances of the underlying system and can make that functionality available to the programmer. A programmer specifies the semantics of the call, the runtime decides how.
 
-Today, Plunder can store and transparently page in large amounts of data from disk. Urbit currently cannot, though this will change if Ares proves successful. 
+Today, Plunder can store and transparently page in [large amounts of data](https://x.com/satisfiesvalues/status/1704549399643164803) from disk. Urbit currently cannot, though this will change if [Ares](https://github.com/urbit/ares) proves successful. 
 
-Both systems provide orthogonal persistence, though in Plunder’s case, the developer has finer grained control over the use of this feature.
+Both systems provide [orthogonal persistence](https://medium.com/dfinity/ic-internals-orthogonal-persistence-9e0c094aac1a), though in Plunder’s case, the developer has finer grained control over the use of this feature.
 
 Every Plunder process—roughly analogous to an “agent”—can be uniquely identified by a private/public key pair. A Plunder process can have one or more key pairs. Urbit has a roughly analogous system available via “comets”, but comets suffer from the overhead of running a full Urbit node. Plunder can spawn these with little additional overhead; they can be long lived or ephemeral.
