@@ -1,0 +1,46 @@
+---
+layout: none
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>{{ site.name | xml_escape }}</title>
+		<description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>		
+		<link>{{ site.url }}</link>
+		<atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
+
+    {%- assign visible_posts = site.posts | where:  'visible', true | sort: 'data' | reverse -%}
+		{% for post in visible_posts %}
+			<item>
+				<title>{{ post.title | xml_escape }}</title>
+				<description>{{ post.content | xml_escape }}</description>
+				<pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+				<link>{{ site.url }}{{ post.url }}</link>
+				<guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+      {% assign post_image = post.image.path | default: post.image %}
+      {% if post_image %}
+        {% unless post_image contains "://" %}
+          {% assign post_image = post_image | absolute_url %}
+        {% endunless %}
+        <media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{{ post_image | xml_escape }}" />
+        <media:content medium="image" url="{{ post_image | xml_escape }}" xmlns:media="http://search.yahoo.com/mrss/" />
+      {% endif %}
+
+        {% assign authors = "" %}
+        {% for author_id in post.authors %}
+        {% assign author = site.authors | where: 'identifier', author_id | first %}
+        {% if author %}
+        {% assign authors = authors | append: author.name | append: ", " %}
+        {% endif %}
+        {% endfor %}
+        {% assign authors = authors | split: ", " | compact | join: ", " | removefirst: ", " %}
+
+        <author>
+          <name>{{ authors }}</name>
+        </author>
+
+			</item>
+		{% endfor %}
+	</channel>
+</rss>
+

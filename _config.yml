@@ -105,8 +105,8 @@ defaults:
 
 # Build settings
 theme: minima
-plugins:
-  - jekyll-feed
+  # plugins:
+  # - jekyll-feed
   # - jekyll-seo-tag
 
 # Exclude from processing.
