@@ -110,4 +110,3 @@ Both systems provide orthogonal persistence, though in Plunder’s case, the dev
 
 
 Every Plunder process—roughly analogous to an “agent”—can be uniquely identified by a private/public key pair. A Plunder process can have one or more key pairs. Urbit has a roughly analogous system available via “comets”, but comets suffer from the overhead of running a full Urbit node. Plunder can spawn these with little additional overhead; they can be long lived or ephemeral.
-
