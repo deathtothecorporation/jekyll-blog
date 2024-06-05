@@ -1,12 +1,16 @@
 ---
 layout: null
 ---
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"  xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:podcast="https://podcastindex.org/namespace/1.0"
+xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{{ site.podcast_title | xml_escape }}</title>
     <description>{{ site.podcast_description | xml_escape }}</description>
     <link>{{ site.url }}{{ site.baseurl }}/podcasts.html</link>
+    <atom:link href="{{ site.url }}{{ site.baseurl }}/podcasts.html"
+rel="self" type="application/rss+xml" />
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
+    <language>en-us</language>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
     <itunes:author>{{ site.author | xml_escape }}</itunes:author>
@@ -17,7 +21,7 @@ layout: null
     </itunes:owner>
     <itunes:image href="{{ site.podcast_art }}"/>
     <itunes:category text="Technology"/>
-    <itunes:explicit>no</itunes:explicit>
+    <itunes:explicit>true</itunes:explicit>
     {% for episode in site.podcasts %}
     <item>
       <title>{{ episode.title | xml_escape }}</title>
