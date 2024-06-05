@@ -36,6 +36,7 @@ documentation_url: https://vaporware.gitbook.io/vaporware
 server: webrick
 podcast_title: "Vaporware"
 podcast_description: "Bi-weekly discussions and interviews about Vaporware Network, peer-to-peer & open source ecosystems, functional programming, crypto, and fringe beliefs"
+podcast_art: https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/podcasts/vaporware-podcast-art.jpg
 
 header_pages:
   - podcasts.html
