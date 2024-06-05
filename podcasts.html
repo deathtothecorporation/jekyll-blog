@@ -28,8 +28,9 @@ title: Podcasts
             </a>
           </h3>
         <div>
+
         <div>
-          {{ page.description | markdownify }}
+          {{ item.summary | markdownify }}
         </div>
 
         {%- if false -%}
