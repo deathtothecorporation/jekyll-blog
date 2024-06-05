@@ -64,4 +64,4 @@ Today, Plunder can store and transparently page in [large amounts of data](https
 
 Both systems provide [orthogonal persistence](https://medium.com/dfinity/ic-internals-orthogonal-persistence-9e0c094aac1a), though in Plunder’s case, the developer has finer grained control over the use of this feature.
 
-Every Plunder process—roughly analogous to an “agent”—can be uniquely identified by a private/public key pair. A Plunder process can have one or more key pairs. Urbit has a roughly analogous system available via “comets”, but comets suffer from the overhead of running a full Urbit node. Plunder can spawn these with little additional overhead; they can be long lived or ephemeral.
+Every Plunder process, or "agent", can be uniquely identified by a private/public key pair. A Plunder process can have one or more key pairs. Urbit has a roughly analogous system available via “comets”, but comets suffer from the overhead of running a full Urbit node. Plunder can spawn these with little additional overhead; they can be long lived or ephemeral.
