@@ -16,7 +16,7 @@ This article is a high level introduction to Plunder for the interested Urbit us
 
 First, Plunder does not invent a new computing model, but instead recombines existing technologies in a new way. In particular, Plunder is based on lambda calculus, supercombinators, and graph reduction.
 
-Second, Plunder is explicitly political, or to be more precise, it is a practical form of [political constructivism](https://plato.stanford.edu/entries/constructivism-political/index.html). Plunder does not have a constitution and is not a republic, but it does encode a set of beliefs about the way human societies should relate to one another, what kind of function societies and individuals play in the broader world, and how to protect the natural rights of these entities from totalizing control.
+Second, Plunder is explicitly political, or to be more precise, it is a practical form of [political constructivism](https://iep.utm.edu/political-constructivism/). Plunder does not have a constitution and is not a republic, but it does encode a set of beliefs about the way human societies should relate to one another, what kind of function societies and individuals play in the broader world, and how to protect the natural rights of these entities from totalizing control.
 
 ## Plunder is pragmatic
 
