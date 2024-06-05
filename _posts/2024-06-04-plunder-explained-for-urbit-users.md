@@ -5,7 +5,7 @@ tags:
   - written
 date: 2024-06-04T19:14:00.000Z
 description: Provide a short description which will be used on social share cards
-image: https://blog.vaporware.network/assets/images/vaporware-default.avif
+image: https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/blog-images/radial-sun.png
 visible: true
 authors:
   - cve
