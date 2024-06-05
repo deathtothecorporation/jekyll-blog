@@ -131,7 +131,7 @@ a {
   &:hover {
     color: $brand-color;
     text-decoration: underline;
-    font-weight: bold;
+    // font-weight: bold;
   }
 
   &.no-underline {
@@ -155,7 +155,7 @@ a.tag-chip {
   color: $grey-color-dark;
   &:hover {
     text-decoration: underline;
-    font-weight: normal;
+    // font-weight: normal;
   }
 }
 
