@@ -4,7 +4,9 @@ title: Plunder, explained for Urbit users
 tags:
   - written
 date: 2024-06-04T19:14:00.000Z
-description: Provide a short description which will be used on social share cards
+description: This article is a high level introduction to Plunder for the
+  interested Urbit user. Plunder is fundamentally working towards a similar set
+  of goals as Urbit, but diverges in two important ways.
 image: https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/blog-images/radial-sun.png
 visible: true
 authors:
