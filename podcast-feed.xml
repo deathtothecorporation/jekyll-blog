@@ -31,6 +31,7 @@ rel="self" type="application/rss+xml" />
       <guid isPermaLink="true">{{ episode.url | prepend: site.baseurl | prepend: site.url }}</guid>
       <enclosure url="{{ episode.source_url }}" length="{{ episode.length }}" type="audio/mpeg"/>
       <itunes:author>{{ episode.author | xml_escape }}</itunes:author>
+      <itunes:image>{{ episode.image }}</itunes:image>
       <itunes:summary>{{ episode.description | xml_escape }}</itunes:summary>
       <itunes:duration>{{ episode.duration }}</itunes:duration>
       <itunes:explicit>true</itunes:explicit>
