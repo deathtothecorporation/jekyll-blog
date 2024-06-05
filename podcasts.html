@@ -7,13 +7,11 @@ title: Podcasts
 
 <p>To add our podcast to your player of choice, use <a href="{{ "/podcast-feed.xml" | prepend: site.baseurl | prepend: site.url }}">this rss url</a>.</p>
 
-<ul>
+<div>
   {%- assign visible_content = site.podcasts | where: 'visible', true | sort: 'date' | reverse -%}
-    <ul class="post-list">
+    <div class="post-list">
       {%- for item in visible_content -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ item.date | date: date_format }}</span>
+      <div>
         <div>
           {% if item.image %}
           <div class="hero-podcast-index">
@@ -22,6 +20,10 @@ title: Podcasts
             </a>
           </div>
           {% endif %}
+          <div>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ item.date | date: date_format }}</span>
+          </div>
           <h3 style="display: inline-block">
             <a class="post-link" href="{{ item.url | relative_url }}">
               {{ item.title | escape }}
@@ -43,9 +45,9 @@ title: Podcasts
         {%- endif -%}
         {%- endif -%}
 
-      </li>
+      </div>
       {%- endfor -%}
-    </ul>
-</ul>
+    </div>
+</div>
 
 <link rel="alternate" type="application/rss+xml" title="Podcast Feed" href="{{ "/podcast-feed.xml" | prepend: site.baseurl | prepend: site.url }}">

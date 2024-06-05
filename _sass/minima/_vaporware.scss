@@ -209,8 +209,8 @@ footer p {
 }
 
 .hero-podcast-index {
-  height: 50vw;
-  width: 50vw;
+  width: 100%;
+  text-align: center;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -226,12 +226,13 @@ footer p {
 }
 
 .hero-podcast {
-  height: 50vh;
-  width: 50vh;
+  height: 80vw;
+  width: 80vw;
   overflow: hidden;
   display: flex;
   margin: 0 auto;
   align-items: center;
+  text-align: center;
   justify-content: center;
   margin-bottom: 20px;
 }
@@ -245,6 +246,7 @@ footer p {
 }
 
 .podcast-image-play {
+  width: 100%;
   margin-bottom: $spacing-unit;
   .player {
     display: flex;
