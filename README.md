@@ -58,7 +58,7 @@ blog.vaporware.network {
 
     route /webhook {
       exec {
-        comand /home/vcavallo/vaporware-blog/sh/github-webhook.sh
+        command /home/vcavallo/vaporware-blog/sh/github-webhook.sh
       }
     }
 }
