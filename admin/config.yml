@@ -43,8 +43,12 @@ collections:
       - { label: "Layout", name: "layout", widget: "hidden", default: "podcast" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list", default: ["podcast"] }
+      - { label: "S3 link", name: "source_url", widget: "string" }
       - { label: "Air Date", name: "date", widget: "datetime" }
-      - { label: "Short Description", name: "description", widget: "string", default: "Provide a short description which will be used on social share cards" }
+      - { label: "Longer Description", name: "description", widget: "markdown", default: "Longer description" }
+      - { label: "Quick Summary", name: "summary", widget: "string", default: "Short summary for podcast feeds and social links" }
+      - { label: "Length (total seconds)", name: "length", widget: "number" }
+      - { label: "Duration (hh:mm:ss)", name: "duration", widget: "string" }
       - { label: "Episode Art (square please)", name: "image", widget: "image" }
       - { label: "Visible?", name: "visible", widget: "boolean", default: false }
       - { label: "Body", name: "body", widget: "markdown" }
@@ -59,5 +63,6 @@ collections:
       - { label: 'Initials', name: 'identifier', widget: 'string' }
       - { label: 'Display Name', name: 'name', widget: 'string' }
       - { label: 'Avatar', name: 'avatar', widget: 'string' }
+      - { label: "Bio", name: "bio", widget: "string" }
       - { label: 'Email (optional)', name: 'email', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }

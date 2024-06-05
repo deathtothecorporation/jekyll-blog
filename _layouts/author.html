@@ -2,11 +2,14 @@
 layout: default
 ---
 
-<article>
+<article class="author-profile">
   <h1>{{ page.name }}</h1>
-  <img src="{{ page.avatar }}" alt="{{ page.name }}'s avatar" />
+  <div class="avatar">
+    <img src="{{ page.avatar }}" alt="{{ page.name }}'s avatar" />
+  </div>
   <p>{{ page.bio }}</p>
   <p>{{ page.email }}</p>
+  <hr />
   <h2>Posts by {{ page.name }}</h2>
   <ul>
     {% assign authored_posts = site.posts | where_exp: 'post',

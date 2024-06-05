@@ -165,6 +165,12 @@ footer p {
   }
 }
 
+.author-profile {
+  .avatar {
+    padding-bottom: $spacing-unit;
+  }
+}
+
 .author-avatar {
   border-radius: 10px;
   width: 20px;
@@ -220,10 +226,11 @@ footer p {
 }
 
 .hero-podcast {
-  height: 25vh;
-  width: 25vh;
+  height: 50vh;
+  width: 50vh;
   overflow: hidden;
   display: flex;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
@@ -235,6 +242,16 @@ footer p {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.podcast-image-play {
+  margin-bottom: $spacing-unit;
+  .player {
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .hero-index > img,
