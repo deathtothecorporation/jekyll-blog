@@ -19,8 +19,10 @@ layout: default
   </time>
 </p>
   {% if page.image %}
+  <div class="podcast-image-play">
   <div class="hero-podcast">
     <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+  </div>
   </div>
   {% endif %}
 
