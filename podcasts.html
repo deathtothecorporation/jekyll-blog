@@ -31,12 +31,15 @@ title: Podcasts
         {%- if site.show_excerpts -%}
           {{ item.excerpt }}
         {%- endif -%}
+
+        {%- if false -%}
         {%- if item.tags.size > 0 -%}
         <div class="tag-chips">
           {%- for tag in item.tags -%}
           <a href="{{ '/tags.html' | relative_url }}#{{ tag | slugify }}" class="tag-chip">{{ tag }}</a>
           {%- endfor -%}
         </div>
+        {%- endif -%}
         {%- endif -%}
 
       </li>
