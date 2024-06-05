@@ -28,9 +28,9 @@ title: Podcasts
             </a>
           </h3>
         <div>
-        {%- if site.show_excerpts -%}
-          {{ item.excerpt }}
-        {%- endif -%}
+        <div>
+          {{ page.description | markdownify }}
+        </div>
 
         {%- if false -%}
         {%- if item.tags.size > 0 -%}
