@@ -20,7 +20,7 @@ Second, Plunder is explicitly political, or to be more precise, it is a practica
 
 ## Plunder is pragmatic
 
-Plunder invents just enough technology to accomplish its goal and no more. This is in contrast to the strategy employed by Urbit, which first enumerates a set of axiomatic engineering principles and then constructs a system in harmony with those principles (here, one plainly sees the Austrian in Moldbug). This difference crosscuts the entirety of the project, but can be seen quite clearly in a comparison of PLAN and Nock. 
+Plunder invents just enough technology to accomplish its goal and no more. This is in contrast to the strategy employed by Urbit, which first enumerates a set of axiomatic engineering principles and then constructs a system in harmony with those principles (here, one plainly sees the Austrian in Moldbug). This difference crosscuts the entirety of the project, but can be seen quite clearly in a comparison of [PLAN](https://vaporware.gitbook.io/vaporware/plan/definition) and [Nock](https://developers.urbit.org/reference/nock/definition). 
 
 PLAN is old technology recombined in a new way. In particular, PLAN restricts lambda calculus to [supercombinators](https://harryrschwartz.com/2017/07/26/lifting-lambdas-into-supercombinators), which enables a compiler architecture that can make use of well understood optimization techniques. For example, Plunder’s interpreter performs standard graph reduction, like Haskell’s GHC, and deduplicates data using a [merkle DAG](https://docs.ipfs.tech/concepts/merkle-dag/), mimicking similar systems found in IPFS or BitTorrent.
 
