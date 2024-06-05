@@ -5,45 +5,40 @@ list_title: "Latest Posts"
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
-  {%- assign visible_content = site.posts | concat: site.podcasts | where: 'visible', true | sort: 'date' | reverse -%}
-  {%- if visible_content.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Latest Posts" }}</h2>
-    <ul class="post-list">
-      {%- for item in visible_content -%}
-      <li>
-
-        <div>
-          {% if item.image %}
-          <div class="hero-index">
-            <a class="post-link" href="{{ item.url | relative_url }}">
-              <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
-            </a>
-          </div>
-          {% endif %}
-          <h3 style="display: inline-block">
-            <a class="post-link" href="{{ item.url | relative_url }}">
-              {{ item.title | escape }}
-            </a>
-          </h3>
+  <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%} {{ content }} {%- assign visible_content = site.posts | concat:
+  site.podcasts | where: 'visible', true | sort: 'date' | reverse -%} {%- if
+  visible_content.size > 0 -%}
+  <h2 class="post-list-heading">
+    {{ page.list_title | default: "Latest Posts" }}
+  </h2>
+  <ul class="post-list">
+    {%- for item in visible_content -%}
+    <li>
+      <div>
+        {% if item.image %}
+        <div class="hero-index">
+          <a class="post-link" href="{{ item.url | relative_url }}">
+            <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" />
+          </a>
         </div>
+        {% endif %}
+        <h3 style="display: inline-block">
+          <a class="post-link" href="{{ item.url | relative_url }}">
+            {{ item.title | escape }}
+          </a>
+        </h3>
+      </div>
 
-        <div class="list-meta">
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <span class="post-meta">{{ item.date | date: date_format }}</span>
+      <div class="list-meta">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y"
+        -%}
+        <span class="post-meta">{{ item.date | date: date_format }}</span>
 
-          {%- if item.authors -%} <span class="authors-dot">•</span>
-        <span
-          itemprop="author"
-          itemscope
-          itemtype="http://schema.org/Person"
-        >
-          {%- assign author_count = item.authors | size -%} {%- if
-          author_count == 1 -%}
+        {%- if item.authors -%} <span class="authors-dot">•</span>
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          {%- assign author_count = item.authors | size -%} {%- if author_count
+          == 1 -%}
           <span class="p-author h-card" itemprop="name">
             {%- assign author_id = item.authors[0] -%} {%- assign author =
             site.authors | where: 'identifier', author_id | first -%} {%- if
@@ -63,34 +58,31 @@ list_title: "Latest Posts"
               {{ author.name }}
               <img class="author-avatar" src="{{ author.avatar }}" />
             </a>
-            {% unless
-            forloop.last %}, {% endunless %} {%- endif -%} {%- endfor -%}
+            {% unless forloop.last %}, {% endunless %} {%- endif -%} {%- endfor
+            -%}
           </span>
           {%- endif -%}
         </span>
-          {%- endif -%}
-        </div>
-
-        {%- if item.collection == "podcasts" -%}
-            {{ item.summary }}
         {%- endif -%}
-        {%- if item.collection == "posts" -%}
-          {{ item.description }}
-        {%- endif -%}
+      </div>
 
-        {%- if item.tags.size > 0 -%}
-        <div class="tag-chips">
-          {%- for tag in item.tags -%}
-          <a href="{{ '/tags.html' | relative_url }}#{{ tag | slugify }}" class="tag-chip">{{ tag }}</a>
-          {%- endfor -%}
-        </div>
-        {%- endif -%}
+      {%- if item.collection == "podcasts" -%} {{ item.summary }} {%- endif -%}
+      {%- if item.collection == "posts" -%} {{ item.description }} {%- endif -%}
+      {%- if false %} {%- if item.tags.size > 0 -%}
+      <div class="tag-chips">
+        {%- for tag in item.tags -%}
+        <a
+          href="{{ '/tags.html' | relative_url }}#{{ tag | slugify }}"
+          class="tag-chip"
+          >{{ tag }}</a
+        >
+        {%- endfor -%}
+      </div>
+      {%- endif -%} {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
 
-      </li>
-      {%- endfor -%}
-    </ul>
-
-    <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>-->
+  <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>-->
   {%- endif -%}
-
 </div>
