@@ -40,8 +40,8 @@ podcast_art: https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/podca
 
 header_pages:
   - podcasts.html
-  - tags.html
-  - about.md
+    # - tags.html
+    # - about.md
 
 show_excerpts: true
 
