@@ -48,4 +48,4 @@ duration: 5422
 image: https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/podcasts/episode-3.png
 visible: true
 ---
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/5GlG2VD7nbfY9mselv0Fhg?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe id="embedPlayer" src="https://embed.podcasts.apple.com/us/podcast/episode-3-dexter-tortoriello/id1750587121?i=1000661085897&amp;itsct=podcast_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto" height="175px" frameborder="0" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write" style="width: 100%; max-width: 660px; overflow: hidden; border-radius: 10px; transform: translateZ(0px); animation: 2s 6 loading-indicator; background-color: rgb(228, 228, 228);"></iframe>
