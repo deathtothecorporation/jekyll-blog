@@ -56,7 +56,7 @@ summary: Chase & Daniel talk to... Chase! They discuss the Chase's background
   and his vision for the company.
 length: 244836590
 duration: 6084
-image: https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/podcasts/episode-8.png
+image: https://general-static-assets.nyc3.cdn.digitaloceanspaces.com/podcasts/episode-8.jpg
 visible: true
 ---
 <iframe height="175" width="100%" title="Media player" src="https://embed.podcasts.apple.com/us/podcast/episode-8-chase-van-etten/id1750587121?i=1000669482742&amp;itscg=30200&amp;itsct=podcast_box_player&amp;ls=1&amp;mttnsubad=1000669482742&amp;theme=auto" id="embedPlayer" style="border: 0px; border-radius: 12px; width: 100%; height: 175px; max-width: 660px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation" allow="autoplay *; encrypted-media *; clipboard-write"></iframe>
